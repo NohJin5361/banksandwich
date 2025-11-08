@@ -111,8 +111,8 @@ const ResultPage = () => {
           <div className="max-w-md mx-auto">
             <div className="w-full bg-gray-200 rounded-full h-4">
               <div
-                className="bg-primary-500 h-4 rounded-full transition-all duration-1000"
-                style={{ width: `${score.scorePercentage}%` }}
+                className="h-4 rounded-full transition-all duration-1000"
+                style={{ width: `${score.scorePercentage}%`, backgroundColor: '#f4b137' }}
               />
             </div>
           </div>

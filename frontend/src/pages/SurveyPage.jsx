@@ -85,8 +85,8 @@ const SurveyPage = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div
-              className="bg-primary-500 h-2 rounded-full transition-all duration-300"
-              style={{ width: `${progress}%` }}
+              className="h-2 rounded-full transition-all duration-300"
+              style={{ width: `${progress}%`, backgroundColor: '#f4b137' }}
               role="progressbar"
               aria-valuenow={progress}
               aria-valuemin="0"
@@ -157,13 +157,14 @@ const SurveyPage = () => {
           <button
             onClick={handleNext}
             disabled={!hasAnswer}
-            className={`flex-1 py-3 rounded-lg font-semibold transition-all
+            className={`flex-1 py-3 rounded-lg font-semibold transition-all text-white
               ${!hasAnswer
                 ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 : currentQuestionIndex === totalQuestions - 1
-                  ? 'bg-secondary-500 text-white hover:bg-secondary-600 active:scale-95'
+                  ? 'hover:bg-secondary-600 active:scale-95'
                   : 'btn-primary'
               }`}
+            style={hasAnswer && currentQuestionIndex === totalQuestions - 1 ? { backgroundColor: '#42abcd' } : {}}
           >
             {currentQuestionIndex === totalQuestions - 1 ? '결과 보기' : '다음'}
           </button>
